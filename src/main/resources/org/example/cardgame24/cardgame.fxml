@@ -10,11 +10,10 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="org.example.cardgame24.CardGameController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cardgame24.CardGameController">
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -43,7 +42,14 @@ fx:controller="org.example.cardgame24.CardGameController">
                   <Font name="Monospaced Regular" size="15.0" />
                </font>
             </Button>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="resultLabel" contentDisplay="CENTER" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Monospaced Regular" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="135.0" />
+               </GridPane.margin>
+            </Label>
          </children>
       </GridPane>
    </top>
@@ -80,24 +86,28 @@ fx:controller="org.example.cardgame24.CardGameController">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="card1ImageView" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="card1ImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></ImageView>
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="card2ImageView" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="card2ImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
             <HBox layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="card3ImageView" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="card3ImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
             <HBox layoutX="410.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="card4ImageView" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="card4ImageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </HBox>
    </center>
